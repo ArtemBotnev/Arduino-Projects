@@ -46,7 +46,7 @@
 //colors for the display
 #define BLACK         0x0000
 #define BLUE          0x001F
-#define LIGHT_BLUE  0x689AD3
+#define LIGHT_BLUE    0x64D9
 #define RED           0xF800
 #define GREEN         0x07E0
 #define CYAN          0x07FF
