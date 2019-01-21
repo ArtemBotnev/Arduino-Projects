@@ -26,10 +26,10 @@ void loop() {
 }
 
 void readTemperatureAndShow() {
-    int8_t roomTemper = (int8_t) bme.readTemperature();
+    int8_t roomTemper = round(bme.readTemperature());
     delay(SENSOR_DELAY);
 
-    int8_t outTemper = (int8_t) sht20.readTemperature();
+    int8_t outTemper = round(sht20.readTemperature());
     delay(SENSOR_DELAY);
 
     display.drawTemperatureMenu(outTemper, roomTemper);
@@ -37,10 +37,10 @@ void readTemperatureAndShow() {
 }
 
 void readHumidityAndShow() {
-    uint8_t roomHumidity = (uint8_t) bme.readHumidity();
+    uint8_t roomHumidity = round(bme.readHumidity());
     delay(SENSOR_DELAY);
 
-    uint8_t outHumidity = (uint8_t) sht20.readHumidity();
+    uint8_t outHumidity = round(sht20.readHumidity());
     delay(SENSOR_DELAY);
 
     display.drawHumidityMenu(outHumidity, roomHumidity);
@@ -49,7 +49,7 @@ void readHumidityAndShow() {
 
 void readAtmPressureAndShow() {
     // mmhg
-    uint16_t pressure = (uint16_t) (bme.readPressure() * 0.0075F);
+    uint16_t pressure = round(bme.readPressure() * 0.0075F);
     delay(2 * SENSOR_DELAY);
 
     display.drawAtmPressureMenu(pressure);
