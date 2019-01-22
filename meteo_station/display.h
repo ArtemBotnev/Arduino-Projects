@@ -33,8 +33,15 @@ extern "C" {
 #define __RS 8
 
 // texts size
-#define TITLE_TEXT 1
-#define VALUE_TEXT 5
+#define TITLE_TEXT_SIZE 1
+#define VALUE_TEXT_SIZE 5
+
+// titles
+#define OUT_TEMPER_TITLE    "Outdoors t, C"
+#define ROOM_TEMPER_TITLE   "Room t, C"
+#define OUT_HUM_TITLE       "Outdoors h, %"
+#define ROOM_HUM_TITLE      "Room h, %"
+#define PRESSURE_TITLE      "Atm.press. p, mmHg"
 
 class Display {
 
